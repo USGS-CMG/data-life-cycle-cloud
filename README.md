@@ -1,5 +1,5 @@
-# data-life-cycle-cloud
-Exploring the USGS Science Data Life Cycle in the Cloud:  a 2017 CDI-funded project.
+# Exporing the USGS Science Data Life Cycle in the Cloud
+A USGS Community for Data Integration (CDI) 2017 funded project
 
 * [Project Description](https://www.sciencebase.gov/catalog/item/58b5e10fe4b01ccd54fde40b)
 
