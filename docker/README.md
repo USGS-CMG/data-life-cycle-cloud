@@ -128,3 +128,9 @@ Removing THREDDS out of the swarm is as easy as issuingthe `docker stack rm` com
 # Removing the service stack
 docker stack rm thredds
 ```
+
+# Deploying JupyterHub
+
+#### SSL Certificate
+
+Created using https://www.akadia.com/services/ssh_test_certificate.html
