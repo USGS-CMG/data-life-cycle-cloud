@@ -1,0 +1,35 @@
+---
+version: '3.3'
+
+secrets:
+  registry_auth:
+    file: ./registry/files/auth/htpasswd
+  registry_ssl_key:
+    file: ./registry/files/ssl/registry_ssl_key.pem
+
+configs:
+  registry_ssl_certificate:
+    file: ./registry/files/ssl/registry_cert.crt
+
+networks:
+  dlcc_network:
+
+volumes:
+  registry_volume:
+    labels:
+      - "docker.volume.description=Registry Docker Volume"
+      - "docker.volume.name=volume.registry"
+
+services:
+  registry:
+    image: registry:2.6.2
+    networks:
+      dlcc_network:
+        aliases:
+          - container.docker.registry
+    ports:
+      - "5000:5000"
+    volumes:
+      - registry_volume:/var/lib/registry
+    environment:
+      - GUNICORN_OPTS=["--preload"]
