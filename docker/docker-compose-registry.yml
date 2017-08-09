@@ -1,16 +1,6 @@
 ---
 version: '3.3'
 
-secrets:
-  registry_auth:
-    file: ./registry/files/auth/htpasswd
-  registry_ssl_key:
-    file: ./registry/files/ssl/registry_ssl_key.pem
-
-configs:
-  registry_ssl_certificate:
-    file: ./registry/files/ssl/registry_cert.crt
-
 networks:
   dlcc_network:
 
