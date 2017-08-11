@@ -272,3 +272,17 @@ single stack launch command.
 ```
 docker stack deploy registry -c docker/registry/docker-compose.yml
 ```
+
+## Registry communications
+
+Typically the Docker engine that communicates with the registry is doing so from the
+context of the Docker Machine VM. Therefore the Docker engine will call the registry
+using localhost at port 5000 all the time.
+
+```
+$ for n in "${array[@]}"; do docker-machine ssh $n curl -s 'http://localhost:5000/v2/';done
+{}{}{}
+```
+
+Each machine can curl localhost at port 5000 and get the same response even though
+the registry runs only on one node. 
