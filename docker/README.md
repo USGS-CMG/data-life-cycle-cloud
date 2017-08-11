@@ -30,7 +30,7 @@ For testing this configuration, I have the following software installed at these
 - Docker Compose: 1.15.0
 - Docker Client: 17.06.0-ce
 
-## Creating a local Swarm Cluster ([tl;dr](#swarm-create))
+## Creating a local Swarm Cluster ([tl;dr](#swarm-create-tldr))
 
 When working with Docker Swarm locally, you can use [VirtualBox](https://www.virtualbox.org/)
 to run your cluster. The example contained in these instructions are done in MacOS.
