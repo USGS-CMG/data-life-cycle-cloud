@@ -21,7 +21,7 @@ rm -f scheduler.json
 srun --mpi=pmi2 dask-mpi --nthreads 10 --memory-limit 60e9 --interface ib0
 ```
 
-The only other change the Python script that starts the Jupyter Notebook server to print out the tunnelling command for Yeti instead of Cheyenne:
+Then to print out the tunnelling command for Yeti instead of Cheyenne, change the Python script that starts the Jupyter Notebook server to:
 ```
 #!/usr/bin/env python
 from dask.distributed import Client
